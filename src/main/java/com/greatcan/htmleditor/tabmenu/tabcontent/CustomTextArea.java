@@ -16,28 +16,6 @@ public class CustomTextArea {
         TextArea textArea = new TextArea();
         textArea.setText("Hello, World!");
 
-        textArea.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
-
-                if (event.getCode().equals(KeyCode.K)) {
-                    //showContextMenu();
-
-                }
-            }
-        });
-
-        textArea.setOnContextMenuRequested(new EventHandler<ContextMenuEvent>() {
-            @Override
-            public void handle(ContextMenuEvent event) {
-                TextAreaSkin skin = (TextAreaSkin) textArea.getSkin();
-                int insertionPoint = skin.getInsertionPoint(event.getX(), event.getY());
-                textArea.positionCaret(insertionPoint);
-                showContextMenu(textArea, event);
-
-            }
-        });
-
         return textArea;
     }
 
