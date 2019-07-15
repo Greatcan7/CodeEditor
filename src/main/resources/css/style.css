@@ -1,0 +1,7 @@
+.dragOver .tree-cell{
+    -fx-background-color: #383b3d;
+    -fx-opacity: 0.1;
+}
+
+
+
